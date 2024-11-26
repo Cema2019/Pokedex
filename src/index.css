@@ -50,6 +50,9 @@ nav a {
 }
 
 .pokedex li {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
   margin: 10px;
   text-align: center;
 }
