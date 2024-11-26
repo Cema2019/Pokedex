@@ -12,7 +12,7 @@ const App = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/">Pokedex</Link>
+                <Link to="/Pokedex">Pokedex</Link>
               </li>
               <li>
                 <Link to="/search">Search</Link>
@@ -21,7 +21,7 @@ const App = () => {
           </nav>
         </header>
         <Routes>
-          <Route path="/" element={<Pokedex />} />
+          <Route path="/Pokedex" element={<Pokedex />} />
           <Route path="/search" element={<Search />} />
         </Routes>
       </div>
