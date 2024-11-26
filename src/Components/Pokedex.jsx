@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import defaultImage from "../assets/missing-pokemon.png";
 
 function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
@@ -15,6 +16,10 @@ function Pokedex() {
     fetchPokemons();
   }, []);
 
+  const handleImageError = (e) => {
+    e.target.src = defaultImage; // Set the locally stored image as the fallback
+  };
+
   return (
     <div className="pokedex">
       <h2>All Pokemon</h2>
@@ -24,6 +29,7 @@ function Pokedex() {
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split("/").filter(Boolean).pop()}.png`}
               alt={pokemon.name}
+              onError={handleImageError}
             />
             {pokemon.name}
           </li>
