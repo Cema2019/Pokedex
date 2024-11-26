@@ -16,7 +16,7 @@ function Search() {
 
   return (
     <div className="search">
-      <h2>Search a Pokemon</h2>
+      <h2>Search a Pokemon by its name or ID number</h2>
       <div className="search-box">
         <input
           type="text"
