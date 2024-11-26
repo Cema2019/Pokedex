@@ -5,14 +5,14 @@ import Search from "./Components/Search";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Pokedex">
       <div className="App">
         <header>
           <h1>Pokedex</h1>
           <nav>
             <ul>
               <li>
-                <Link to="/Pokedex">Pokedex</Link>
+                <Link to="/">Pokedex</Link>
               </li>
               <li>
                 <Link to="/search">Search</Link>
@@ -21,7 +21,7 @@ const App = () => {
           </nav>
         </header>
         <Routes>
-          <Route path="/Pokedex" element={<Pokedex />} />
+          <Route path="/" element={<Pokedex />} />
           <Route path="/search" element={<Search />} />
         </Routes>
       </div>
