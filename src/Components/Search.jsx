@@ -22,6 +22,7 @@ function Search() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && fetchPokemon()}
         />
         <button onClick={fetchPokemon}>Search</button>
       </div>
